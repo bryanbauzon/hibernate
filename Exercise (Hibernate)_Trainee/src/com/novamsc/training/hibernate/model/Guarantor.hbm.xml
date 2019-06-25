@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping
+	package="com.novamsc.training.hibernate.model" default-access="field">
+
+
+
+
+	<class name="Guarantor" table="GUARANTOR">
+		<id name="guarantorId" column="GUARANTORID">
+			<generator class="identity" />
+		</id>
+
+		<version name="version" column="VERSION" type="int" />
+		<property name="name" column="NAME" type="string" />
+		<property name="nric" column="NRIC" type="string" />
+
+		<set name="loanAccounts" table="LOANACCOUNT"
+			cascade="all, delete-orphan" inverse="true">
+			<key column="GUARANTORID" />
+			<one-to-many class="LoanAccount" />
+		</set>
+
+
+
+	</class>
+
+
+
+
+
+
+
+
+
+</hibernate-mapping>

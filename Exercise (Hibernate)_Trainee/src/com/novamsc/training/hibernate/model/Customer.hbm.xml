@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping
+	package="com.novamsc.training.hibernate.model" default-access="field">
+	<class name="Customer" table="CUSTOMER">
+		<id name="customerID" column="CUSTOMERID">
+			<generator class="identity" />
+		</id>
+
+		<property name="version" column="VERSION" type="int"
+			not-null="true" />
+		<property name="lastName" column="LASTNAME" type="string" />
+		<property name="firstName" column="FIRSTNAME" type="string" />
+		<component name="address" class="Address">
+			<property name="address1" column="ADDRESS1" type="string" />
+			<property name="address2" column="ADDRESS2" type="string" />
+			<property name="city" column="CITY" type="string" />
+			<property name="state" column="STATE" type="string" />
+			<property name="zip" column="ZIP" type="string" />
+			<property name="country" column="COUNTRY" type="string" />
+		</component>
+		
+
+
+	 	 <set name="accounts" table="ACCOUNT" cascade="all, delete-orphan"
+			inverse="true">
+			<key column="CUSTOMERID" />
+			<one-to-many class="Account" />
+		</set>
+  
+	</class>
+</hibernate-mapping>

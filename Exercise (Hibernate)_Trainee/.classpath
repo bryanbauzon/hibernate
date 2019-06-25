@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="test"/>
+	<classpathentry kind="lib" path="lib/c3p0-0.9.1.2.jar"/>
+	<classpathentry kind="lib" path="lib/derbyclient.jar"/>
+	<classpathentry kind="lib" path="lib/hibernate-support/antlr-2.7.6.jar"/>
+	<classpathentry kind="lib" path="lib/hibernate-support/asm-attrs.jar"/>
+	<classpathentry kind="lib" path="lib/hibernate-support/asm.jar"/>
+	<classpathentry kind="lib" path="lib/hibernate-support/cglib-2.1.3.jar"/>
+	<classpathentry kind="lib" path="lib/hibernate-support/commons-collections-2.1.1.jar"/>
+	<classpathentry kind="lib" path="lib/hibernate-support/commons-logging-1.0.4.jar"/>
+	<classpathentry kind="lib" path="lib/hibernate-support/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="lib/hibernate-support/ehcache-1.2.3.jar"/>
+	<classpathentry kind="lib" path="lib/hibernate-support/hibernate3.jar"/>
+	<classpathentry kind="lib" path="lib/hibernate-support/jdbc2_0-stdext.jar"/>
+	<classpathentry kind="lib" path="lib/hibernate-support/jta.jar"/>
+	<classpathentry kind="lib" path="lib/junit_4/junit-4.1.jar"/>
+	<classpathentry kind="lib" path="lib/pavo-core-4.0-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="lib/spring-framework/commons-logging-1.1.jar"/>
+	<classpathentry kind="lib" path="lib/spring-framework/spring-2.5.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="build/test/classes"/>
+</classpath>

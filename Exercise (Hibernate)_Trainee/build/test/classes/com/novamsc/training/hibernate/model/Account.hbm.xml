@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping
+	package="com.novamsc.training.hibernate.model" default-access="field">
+	<typedef name="AccountType"
+		class="com.novacitynets.pavo.hibernate.usertype.GenericEnumUserType">
+		<param name="enumClass">com.novamsc.training.hibernate.util.AccountType</param>
+		<param name="identifierMethod">toChar</param>
+		<param name="valueOfMethod">fromChar</param>
+	</typedef>
+
+	<class name="Account" table="ACCOUNT ">
+		<id name="accountID" column="ACCOUNTID">
+			<generator class="identity" />
+		</id>
+
+
+
+
+		<property name="version" column="VERSION" type="int"
+			not-null="true" />
+		<property name="accountType" column="TYPE" type="AccountType" />
+		<property name="balance" column="BALANCE" type="double" />
+
+	 	
+  	<many-to-one name="customer" class="Customer" column="customerID" not-null="true"/>  
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping
+	package="com.novamsc.training.hibernate.model" default-access="field">
+
+
+	<class name="LoanAccount" table="LOANACCOUNT">
+		<id name="loanAccountId" column="LOANACCOUNTID">
+			<generator class="identity" />
+		</id>
+		<version name="version" column="VERSION" type="int" />
+
+		<property name="loanAccountNo" column="LOANACCNO"
+			type="string" />
+		<property name="loanType" column="LOANTYPE" type="char" />
+		<property name="amount" column="AMOUNT" type="double" />
+		<property name="loanDate" column="LOANDATE" type="date" />
+
+		<many-to-one name="customer" class="Customer"
+			not-null="true" column="CUSTOMERID" />
+		<many-to-one name="guarantor" class="Guarantor"
+			column="GUARANTORID" not-null="true" />
+
+	</class>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<!-- <class name="LoanAccount" table="LOANACCOUNT"> <id name="loanAccountId" 
+		column="LOANACCOUNTID"> <generator class="identity" /> </id> <property name="version" 
+		column="VERSION" type="int" not-null="true" /> -->
+
+	<!-- <property name="customerId" column="CUSTOMERID" type="long" not-null="true" 
+		unique="true" /> <property name="guarantorId" column="GUARANTORID" type="long" 
+		not-null="true" /> -->
+
+
+
+	<!-- <one-to-one name="customer" class="Customer"/> -->
+	<!-- <property name="loanAccountNo" column="LOANACCNO" type="string" unique="true" 
+		not-null="true" /> <property name="loanType" column="LOANTYPE" type="char" 
+		unique="true" not-null="true" /> <property name="amount" column="AMOUNT" 
+		type="double" /> <property name="loanDate" column="LOANDATE" type="date" 
+		/> <many-to-one name="guarantorId" class="Guarantor" column="GUARANTORID" 
+		not-null="true" /> <many-to-one name="customerId" class="Customer" column="CUSTOMERID" 
+		not-null="true" /> -->
+
+	<!-- </class> -->
+
+
+
+
+
+
+
+
+
+
+</hibernate-mapping>
