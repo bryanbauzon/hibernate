@@ -66,8 +66,8 @@ public class CustomerDAOTest
         Account account = new Account();
  
 
-        customer.setLastName("Calisaan");
-        customer.setFirstName("Camille");
+        customer.setLastName("hello");
+        customer.setFirstName("foobar");
 
         address.setAddress1("Anda");
         address.setAddress2(null);
